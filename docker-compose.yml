@@ -8,20 +8,20 @@ services:
       - 80:80
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: Hema
+      WORDPRESS_DB_PASSWORD: admin@123
+      WORDPRESS_DB_NAME: Hemadb
     volumes:
       - wordpress:/var/www/html
 
   db:
-    image: mysql:8.0
+    image: mysql:8.0.34
     restart: always
     environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      MYSQL_DATABASE: mysqldb
+      MYSQL_USER: Hema
+      MYSQL_PASSWORD: admin@123
+      MYSQL_RANDOM_ROOT_PASSWORD: dbpass
     volumes:
       - db:/var/lib/mysql
     expose:
